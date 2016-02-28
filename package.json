@@ -1,0 +1,27 @@
+{
+  "name": "file-metadata-microservice",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp API Project: File Metadata Microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abrden/file-metadata-microservice/"
+  },
+  "keywords": [
+    "API",
+    "abrden",
+    "file",
+    "metadata"
+  ],
+  "author": "Agustina (abrden) Barbetta",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.5",
+    "multer": "^1.1.0"
+  }
+}
