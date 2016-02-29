@@ -1,11 +1,11 @@
 'use strict';
 
-//var fs = require('fs');
 var multer = require('multer');
+var fs = require('fs');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'upload/');
+        cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname);
@@ -13,7 +13,6 @@ var storage = multer.diskStorage({
 });
 
 var uploadFile = multer({ storage: storage }).single('userFile');
-
 
 module.exports = function (app, File) {
     
@@ -23,7 +22,7 @@ module.exports = function (app, File) {
             if (err) throw err;
             
             var fileEntry = {
-                name: req.file.originalname, //req.file.filename
+                name: req.file.originalname,
                 size: req.file.size
             };
             
@@ -31,8 +30,9 @@ module.exports = function (app, File) {
                 if (err) throw err;
             });
             
-            //fs.unlinkSync("./uploads/" + req.file.filename);
-            res.send(fileEntry);
+            fs.unlinkSync("./uploads/" + req.file.filename);
+            
+            res.json(fileEntry);
         });
     });
 };
