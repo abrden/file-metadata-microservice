@@ -9,10 +9,10 @@
 Submit a file and receive it's size in bytes, for example:
 
 ```javascript
-    { "name": "ibelieveinsherlockholmes.txt",
+    { "name": "fish.raw",
     "size": 31415
     }
 ```
 
 ## Live site
-<https://.herokuapp.com>
+<https://abrden-file-meta.herokuapp.com>
