@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/');
+        cb(null, 'tmp/');
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname);
@@ -30,7 +30,7 @@ module.exports = function (app, File) {
                 if (err) throw err;
             });
             
-            fs.unlinkSync("./uploads/" + req.file.filename);
+            fs.unlinkSync('./tmp/' + req.file.filename);
             
             res.json(fileEntry);
         });
