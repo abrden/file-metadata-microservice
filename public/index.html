@@ -21,22 +21,20 @@
             <li>When I submit something, I will receive the file size in bytes within the JSON response.</li>
         </ol>
     </blockquote>
-    <h2>Usage:</h2>
-    Submit a file and receive it's size in bytes, for example: <code>{ "name": "ibelieveinsherlockholmes.txt", "size": 31415 }</code>.
+    <h3>Usage:</h3>
+    Submit a file and receive it's size in bytes, for example: <code>{ "name": "fish.raw", "size": 31415 }</code>.
     
     <br><br><br>
     
-    <form action="/upload" method="post" enctype="multipart/form-data" >
+    <form action="/result" method="post" enctype="multipart/form-data">
         <div class="col-xs-10">
-            <input type="file" name="userFile" class="form-control"/>
+            <input type="file" name="user-file" class="form-control"/>
         </div>
         <div class="col-xs-2">
             <button type="submit" class="btn btn-primary" >Submit</button>
         </div>
     </form>
-    
-    
-    
+
 </div>
 </body>
 </html>
